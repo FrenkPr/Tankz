@@ -61,8 +61,8 @@ namespace Tankz
                 KeyCode.Right,
                 KeyCode.Up,
                 KeyCode.Down,
-                KeyCode.Keypad1,
-                KeyCode.Keypad7
+                KeyCode.Num1,
+                KeyCode.Num3
             };
 
             string[] joypadsConnected = Window.Joysticks;
