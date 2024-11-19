@@ -85,10 +85,19 @@ namespace Tankz
                 return;
             }
 
+            QuitGame();
             Move();
             RotateCannon();
             Shoot();
             NextWeapon();
+        }
+
+        public void QuitGame()
+        {
+            if (Game.KeyboardCtrls[Id].IsKeyPressed(KeyCode.Esc) || IsJoypadBtnPressed(JoypadValue.B))
+            {
+                Game.CurrentScene.IsPlaying = false;
+            }
         }
 
         private void Move()
@@ -121,15 +130,6 @@ namespace Tankz
             {
                 cannonSprite.Rotation += cannonRotationSpeed * dirX * Game.DeltaTime;
                 cannonSprite.Rotation = MathHelper.Clamp(cannonSprite.Rotation, minCannonAngle, maxCannonAngle);
-
-                //float maxAngle = cannonSprite.Rotation > 0 ? -MathHelper.DegreesToRadians(360) : MathHelper.DegreesToRadians(360);
-
-                //if ((cannonSprite.Rotation < 0 && cannonSprite.Rotation <= -maxAngle) || (cannonSprite.Rotation > 0 && cannonSprite.Rotation >= -maxAngle))
-                //{
-                //    cannonSprite.Rotation += maxAngle;
-                //}
-
-                //Console.WriteLine(cannonSprite.Rotation);
             }
         }
 
@@ -189,7 +189,7 @@ namespace Tankz
                 return;
             }
 
-            if (Game.KeyboardCtrls[Id].IsValuePressed(KeyCodeType.NextWeapon) || IsJoypadValuePressed(JoypadValue.Square))
+            if (Game.KeyboardCtrls[Id].IsKeyPressed(KeyCodeType.NextWeapon) || IsJoypadBtnPressed(JoypadValue.Square))
             {
                 if (!isWeaponSwitcherPressed)
                 {
@@ -230,9 +230,9 @@ namespace Tankz
             return Game.JoypadCtrls.Count != 0 ? Game.JoypadCtrls[Id].GetHorizontal() : 0;
         }
 
-        private bool IsJoypadValuePressed(JoypadValue value)
+        private bool IsJoypadBtnPressed(JoypadValue value)
         {
-            return Game.JoypadCtrls.Count != 0 ? Game.JoypadCtrls[Id].IsValuePressed(value) : false;
+            return Game.JoypadCtrls.Count != 0 ? Game.JoypadCtrls[Id].IsJoypadBtnPressed(value) : false;
         }
 
         protected override void CheckOutOfScreen()

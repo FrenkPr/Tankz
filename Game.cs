@@ -35,6 +35,8 @@ namespace Tankz
             optimalScreenHeight = 1080;
             optimalUnitSize = optimalScreenHeight / Window.OrthoHeight;
 
+            Window.SetIcon("Assets/TankzIco.ico");
+
             //System.Console.WriteLine(Window.CurrentViewportOrthographicSize + "\n" + Window.OrthoWidth + "\n" + Window.OrthoHeight);
 
             NumMaxPlayers = 2;
@@ -48,8 +50,8 @@ namespace Tankz
             {
                 KeyCode.A,
                 KeyCode.D,
-                KeyCode.Q,
-                KeyCode.E,
+                KeyCode.Up,
+                KeyCode.Down,
                 KeyCode.Space,
                 KeyCode.Tab
             };
@@ -59,10 +61,10 @@ namespace Tankz
             {
                 KeyCode.Left,
                 KeyCode.Right,
-                KeyCode.Up,
-                KeyCode.Down,
-                KeyCode.Num1,
-                KeyCode.Num3
+                KeyCode.Q,
+                KeyCode.E,
+                KeyCode.Num2,
+                KeyCode.Num1
             };
 
             string[] joypadsConnected = Window.Joysticks;

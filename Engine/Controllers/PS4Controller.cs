@@ -15,10 +15,10 @@ namespace Tankz
 
         public override bool IsFirePressed()
         {
-            return IsValuePressed(JoypadValue.Square);
+            return IsJoypadBtnPressed(JoypadValue.Square);
         }
 
-        public override bool IsValuePressed(JoypadValue value)
+        public override bool IsJoypadBtnPressed(JoypadValue value)
         {
             bool valuePressed = false;
 

@@ -52,19 +52,19 @@ namespace Tankz
         {
             float direction = 0;
 
-            if (IsValuePressed(keys.KeyCode[KeyCodeType.Left]) && IsValuePressed(keys.KeyCode[KeyCodeType.Right]))
+            if (IsKeyPressed(keys.KeyCode[KeyCodeType.Left]) && IsKeyPressed(keys.KeyCode[KeyCodeType.Right]))
             {
                 direction = 0;
             }
 
             else
             {
-                if (IsValuePressed(keys.KeyCode[KeyCodeType.Left]))
+                if (IsKeyPressed(keys.KeyCode[KeyCodeType.Left]))
                 {
                     direction = -1;
                 }
 
-                else if (IsValuePressed(keys.KeyCode[KeyCodeType.Right]))
+                else if (IsKeyPressed(keys.KeyCode[KeyCodeType.Right]))
                 {
                     direction = 1;
                 }
@@ -77,19 +77,19 @@ namespace Tankz
         {
             float direction = 0;
 
-            if (IsValuePressed(keys.KeyCode[KeyCodeType.CannonRotationLeft]) && IsValuePressed(keys.KeyCode[KeyCodeType.CannonRotationRight]))
+            if (IsKeyPressed(keys.KeyCode[KeyCodeType.CannonRotationLeft]) && IsKeyPressed(keys.KeyCode[KeyCodeType.CannonRotationRight]))
             {
                 direction = 0;
             }
 
             else
             {
-                if (IsValuePressed(keys.KeyCode[KeyCodeType.CannonRotationLeft]))
+                if (IsKeyPressed(keys.KeyCode[KeyCodeType.CannonRotationLeft]))
                 {
                     direction = -1;
                 }
 
-                else if (IsValuePressed(keys.KeyCode[KeyCodeType.CannonRotationRight]))
+                else if (IsKeyPressed(keys.KeyCode[KeyCodeType.CannonRotationRight]))
                 {
                     direction = 1;
                 }
@@ -100,20 +100,20 @@ namespace Tankz
 
         public override bool IsFirePressed()
         {
-            return IsValuePressed(keys.KeyCode[KeyCodeType.Fire]);
+            return IsKeyPressed(keys.KeyCode[KeyCodeType.Fire]);
         }
 
-        public bool IsValuePressed(KeyCode value)
+        public bool IsKeyPressed(KeyCode value)
         {
             return Game.Window.GetKey(value);
         }
 
-        public bool IsValuePressed(KeyCodeType type)
+        public bool IsKeyPressed(KeyCodeType type)
         {
-            return IsValuePressed(keys.KeyCode[type]);
+            return IsKeyPressed(keys.KeyCode[type]);
         }
 
-        public bool IsValuePressed(MouseValue value)
+        public bool IsMouseButtonPressed(MouseValue value)
         {
             bool res = false;
 

@@ -42,6 +42,6 @@ namespace Tankz
             return Game.Window.JoystickAxisRight(controllerIndex).X;
         }
 
-        public abstract bool IsValuePressed(JoypadValue value);
+        public abstract bool IsJoypadBtnPressed(JoypadValue value);
     }
 }
