@@ -5,6 +5,10 @@ All rights reserved to AIV company.
 # Short description
 A tank shooter game, 2 players.
 
+# Game info
+It could be needed to disable your anti-virus to play the game.<br/>
+Your anti-virus could say it's a virus because of some part of the written code.
+
 # Controls
 A/D Keys &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move first player to left/right
